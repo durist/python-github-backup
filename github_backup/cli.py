@@ -75,7 +75,7 @@ def main():
 
     def refresh_app_installation_token(args):
         while True:
-            refresh_interval =  datetime.now() + timedelta(minutes=app_installation_token_refresh_interval)
+            refresh_time = datetime.now() + timedelta(minutes=app_installation_token_refresh_interval)
             logger.info("App installation token refresh time: " + str(refresh_time))
             pause.until(refresh_time)
             logger.info("Refreshing app installation token")
