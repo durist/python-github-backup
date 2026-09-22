@@ -97,7 +97,8 @@ def main():
             )
             args.include_gists = False
         if args.app_installation_secret.startswith(FILE_URI_PREFIX):
-            with open(args.app_installation_secret) as f:
+            secret_path = args.app_installation_secret.removeprefix(FILE_URI_PREFIX)
+            with open(secret_path) as f:
                 args.app_installation_secret = f.read()
         args.token_classic = get_app_installation_token(
             app_id=args.app_id,
