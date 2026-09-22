@@ -241,6 +241,8 @@ Github app installation authentication is also useful for large organization bac
 
 To dynamically regenerate tokens before the one hour expiration, use the option ``--as-app-dynamic-token`` along with the options ``--app-id`` and ``--app-installation-id`` and ``--app-installation-secret``.
 
+NOTE: this token type can't currently back up gists.
+
 
 Prefer SSH
 ~~~~~~~~~~
